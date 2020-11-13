@@ -16,7 +16,9 @@ function check() {
           alert(`Error ${XHR.status}: ${XHR.statusText}`);
           return null;          
         }
+
         const item = XHR.response.post;
+      
         if (item.checked === true) {
           post.setAttribute("data-check", "true");
         } else if (item.checked === false) {
@@ -26,4 +28,4 @@ function check() {
     });
   });
 }
-setInterval(check, 1000);
+setInterval(check, 1000); 
